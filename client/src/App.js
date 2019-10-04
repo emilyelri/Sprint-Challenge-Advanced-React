@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import './App.css';
+import Dark from './components/DarkmodeButton';
 
 class App extends React.Component {
   state = {
@@ -19,7 +19,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="app">
+        <h1>Players by Search Count</h1>
+        <Dark />
         <div className="list">
           <ol>
             {this.state.players.map(player => (
@@ -27,7 +29,7 @@ class App extends React.Component {
               ))}
           </ol>
         </div>
-      </>
+      </div>
     );
   }
 }
