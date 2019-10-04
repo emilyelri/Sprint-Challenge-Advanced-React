@@ -1,17 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
-import * as rtl from 'react-testing-library';
+import { render } from '@testing-library/react';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('App renders without crashing.', () => {
+  render(<App />);
 });
 
-test('app has header', () => {
-  const app = render(<App />);
-  app.getByText(/Players by Search Count/i);
+test('App has a header title.', () => {
+  const {getByText} = render(<App />);
+  getByText(/players/i);
 })
 
 // test('styles change to darkmode when toggled', () => {
