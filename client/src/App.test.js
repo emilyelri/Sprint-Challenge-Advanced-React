@@ -8,3 +8,13 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+test('app has header', () => {
+  const app = render(<App />);
+  app.getByText(/Players by Search Count/i);
+})
+
+// test('styles change to darkmode when toggled', () => {
+//   const app = render(<App />);
+
+// })
