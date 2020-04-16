@@ -23,9 +23,15 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+        Class components are the only way you can access lifecycle methods in React
 - [ ] Name three lifecycle methods and their purposes.
+        1. componentDidMount - runs when component is first mounted to app
+        2. componentDidUpdate - runs when the component state is changed and re-renders the component
+        3. shouldComponentUpdate - runs a certain test to determine whether or not a code should run when component is updated, ie, only when certain state changes
 - [ ] What is the purpose of a custom hook?
+        It helps to keep code dry while also allowing you to use more versatile hooks than useEffect and useState but also allows several nested useStates or useEffects
 - [ ] Why is it important to test our apps?
+        Making sure that everything is working from the get go allows to build stronger and more reliable apps.
 
 ## Project Set Up
 
